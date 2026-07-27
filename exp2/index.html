@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarVerse - Astrology & Horoscope</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="StarVerse offers astrology, zodiac insights, birth charts, horoscopes, numerology and cosmic events with a premium mystical experience.">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-ring"></div>
+        <p>Connecting to the cosmos...</p>
+    </div>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=80&q=80" alt="StarVerse logo">
+            <div>
+                <h1>StarVerse</h1>
+                <p>Astrology & Horoscope</p>
+            </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <nav class="main-nav" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Astrology</a>
+        <a href="#zodiac">Zodiac Signs</a>
+        <a href="#horoscope">Horoscope</a>
+        <a href="#birthchart">Birth Chart</a>
+        <a href="#planets">Planets</a>
+        <a href="#numerology">Numerology</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="cosmic-overlay"></div>
+            <div class="hero-content">
+                <small>Welcome to the mystical universe</small>
+                <h2 class="typing-text" data-text="Discover Your Destiny Through the Stars"></h2>
+                <p>Explore premium astrology insights with modern birth charts, horoscope readings, planetary guidance and cosmic wellness.</p>
+                <div class="hero-actions">
+                    <a href="#horoscope" class="btn btn-primary">Explore Horoscope</a>
+                    <a href="#zodiac" class="btn btn-secondary">Know Your Zodiac</a>
+                </div>
+                <div class="hero-metrics">
+                    <article>
+                        <h3><span id="currentDate">--</span></h3>
+                        <p>Current date</p>
+                    </article>
+                    <article>
+                        <h3><span id="currentTime">--</span></h3>
+                        <p>Current time</p>
+                    </article>
+                    <article>
+                        <h3><span id="visitorCounter">0</span>+</h3>
+                        <p>Cosmic visitors today</p>
+                    </article>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80" alt="Galaxy and moon illustration">
+            </div>
+            <div class="planet-orbit">
+                <span class="planet planet-sun"></span>
+                <span class="planet planet-moon"></span>
+                <span class="planet planet-venus"></span>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="section-heading">
+                <small>About Astrology</small>
+                <h2>Why the stars matter for your destiny</h2>
+                <p>A modern guide to astrology that blends tradition, history, and performance wisdom for real life.</p>
+            </div>
+            <div class="info-grid">
+                <article>
+                    <h3>What is Astrology?</h3>
+                    <p><strong>Astrology</strong> is the study of planetary and star alignments that influence personality, timing, and emotional patterns.</p>
+                </article>
+                <article>
+                    <h3>History</h3>
+                    <p>From ancient Mesopotamia to modern digital horoscopes, astrology has evolved across cultures and centuries.</p>
+                </article>
+                <article>
+                    <h3>Western Astrology</h3>
+                    <p>Western astrology is based on sun signs, houses, and planetary transits to paint your personality map.</p>
+                </article>
+                <article>
+                    <h3>Vedic Astrology</h3>
+                    <p>Vedic astrology uses lunar constellations and nakshatras to reveal destiny, karmic cycles, and spiritual lessons.</p>
+                </article>
+                <article>
+                    <h3>Chinese Astrology</h3>
+                    <p>Chinese astrology combines zodiac animals, elements, and lunar years to create a cultural life forecast.</p>
+                </article>
+                <article>
+                    <h3>Benefits</h3>
+                    <ol>
+                        <li>Self-awareness</li>
+                        <li>Better timing</li>
+                        <li>Relationship insight</li>
+                        <li>Career guidance</li>
+                    </ol>
+                </article>
+            </div>
+            <figure class="about-figure">
+                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Astrology wheel illustration">
+                <figcaption>Discover the harmony of star maps, planets, and zodiac energy.</figcaption>
+            </figure>
+            <aside>
+                <blockquote>
+                    "The stars impel, they do not compel." <strong>— William Shakespeare</strong>
+                </blockquote>
+                <p><mark>Birth charts</mark> reveal your unique cosmic blueprint and why some days feel easier than others.</p>
+            </aside>
+            <article class="myths">
+                <h3>Common Myths</h3>
+                <ul>
+                    <li>Astrology is only about sun signs.</li>
+                    <li>Horoscopes predict exact events.</li>
+                    <li>It is incompatible with science.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section zodiac-section" id="zodiac">
+            <div class="section-heading">
+                <small>Zodiac Signs</small>
+                <h2>Meet all 12 signs of the zodiac</h2>
+                <p>Search a sign or browse the cosmic cards to learn about personality, love, career, and your lucky match.</p>
+            </div>
+            <div class="search-bar">
+                <label for="zodiacSearch">Live zodiac search</label>
+                <input type="search" id="zodiacSearch" placeholder="Search Aries, Taurus, Gemini...">
+            </div>
+            <div class="zodiac-grid" id="zodiacGrid">
+                <!-- Zodiac cards generated in HTML for JS filter -->
+                <article class="zodiac-card" data-name="Aries">
+                    <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=300&q=60" alt="Aries symbol">
+                    <h3>Aries</h3>
+                    <p><strong>Dates:</strong> Mar 21 - Apr 19</p>
+                    <p><strong>Element:</strong> Fire</p>
+                    <p><strong>Planet:</strong> Mars</p>
+                    <p><strong>Lucky Color:</strong> Red</p>
+                    <p><strong>Lucky Number:</strong> 9</p>
+                    <p><strong>Compatible:</strong> Leo, Sagittarius</p>
+                    <p><strong>Strengths:</strong> Bold, confident, passionate</p>
+                    <p><strong>Weaknesses:</strong> Impulsive, impatient</p>
+                    <p><strong>Love:</strong> Fiery and loyal</p>
+                    <p><strong>Career:</strong> Leadership, entrepreneurship</p>
+                    <p><strong>Health:</strong> Energetic needs balance</p>
+                </article>
+                <article class="zodiac-card" data-name="Taurus">
+                    <img src="https://images.unsplash.com/photo-1518544885055-4a0b3d9cd173?auto=format&fit=crop&w=300&q=60" alt="Taurus symbol">
+                    <h3>Taurus</h3>
+                    <p><strong>Dates:</strong> Apr 20 - May 20</p>
+                    <p><strong>Element:</strong> Earth</p>
+                    <p><strong>Planet:</strong> Venus</p>
+                    <p><strong>Lucky Color:</strong> Green</p>
+                    <p><strong>Lucky Number:</strong> 6</p>
+                    <p><strong>Compatible:</strong> Virgo, Capricorn</p>
+                    <p><strong>Strengths:</strong> Reliable, sensual, patient</p>
+                    <p><strong>Weaknesses:</strong> Stubborn, possessive</p>
+                    <p><strong>Love:</strong> Deep and steady</p>
+                    <p><strong>Career:</strong> Finance, design, agriculture</p>
+                    <p><strong>Health:</strong> Grounding nature supports wellness</p>
+                </article>
+                <article class="zodiac-card" data-name="Gemini">
+                    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=300&q=60" alt="Gemini symbol">
+                    <h3>Gemini</h3>
+                    <p><strong>Dates:</strong> May 21 - Jun 20</p>
+                    <p><strong>Element:</strong> Air</p>
+                    <p><strong>Planet:</strong> Mercury</p>
+                    <p><strong>Lucky Color:</strong> Yellow</p>
+                    <p><strong>Lucky Number:</strong> 5</p>
+                    <p><strong>Compatible:</strong> Libra, Aquarius</p>
+                    <p><strong>Strengths:</strong> Curious, adaptable, clever</p>
+                    <p><strong>Weaknesses:</strong> Restless, indecisive</p>
+                    <p><strong>Love:</strong> Playful and communicative</p>
+                    <p><strong>Career:</strong> Media, education, sales</p>
+                    <p><strong>Health:</strong> Nervous energy needs mindful focus</p>
+                </article>
+                <article class="zodiac-card" data-name="Cancer">
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=300&q=60" alt="Cancer symbol">
+                    <h3>Cancer</h3>
+                    <p><strong>Dates:</strong> Jun 21 - Jul 22</p>
+                    <p><strong>Element:</strong> Water</p>
+                    <p><strong>Planet:</strong> Moon</p>
+                    <p><strong>Lucky Color:</strong> Silver</p>
+                    <p><strong>Lucky Number:</strong> 2</p>
+                    <p><strong>Compatible:</strong> Scorpio, Pisces</p>
+                    <p><strong>Strengths:</strong> Compassionate, protective, intuitive</p>
+                    <p><strong>Weaknesses:</strong> Moody, clingy</p>
+                    <p><strong>Love:</strong> Deeply nurturing</p>
+                    <p><strong>Career:</strong> Healing, hospitality, arts</p>
+                    <p><strong>Health:</strong> Emotional care is vital</p>
+                </article>
+                <article class="zodiac-card" data-name="Leo">
+                    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=300&q=60" alt="Leo symbol">
+                    <h3>Leo</h3>
+                    <p><strong>Dates:</strong> Jul 23 - Aug 22</p>
+                    <p><strong>Element:</strong> Fire</p>
+                    <p><strong>Planet:</strong> Sun</p>
+                    <p><strong>Lucky Color:</strong> Gold</p>
+                    <p><strong>Lucky Number:</strong> 1</p>
+                    <p><strong>Compatible:</strong> Aries, Sagittarius</p>
+                    <p><strong>Strengths:</strong> Confident, generous, dramatic</p>
+                    <p><strong>Weaknesses:</strong> Proud, attention-seeking</p>
+                    <p><strong>Love:</strong> Warm and devoted</p>
+                    <p><strong>Career:</strong> Performance, leadership, design</p>
+                    <p><strong>Health:</strong> Heart and vitality matter</p>
+                </article>
+                <article class="zodiac-card" data-name="Virgo">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=300&q=60" alt="Virgo symbol">
+                    <h3>Virgo</h3>
+                    <p><strong>Dates:</strong> Aug 23 - Sep 22</p>
+                    <p><strong>Element:</strong> Earth</p>
+                    <p><strong>Planet:</strong> Mercury</p>
+                    <p><strong>Lucky Color:</strong> Blue</p>
+                    <p><strong>Lucky Number:</strong> 3</p>
+                    <p><strong>Compatible:</strong> Taurus, Capricorn</p>
+                    <p><strong>Strengths:</strong> Practical, analytical, humble</p>
+                    <p><strong>Weaknesses:</strong> Overcritical, perfectionist</p>
+                    <p><strong>Love:</strong> Caring and devoted</p>
+                    <p><strong>Career:</strong> Healthcare, research, editing</p>
+                    <p><strong>Health:</strong> Routine and diet support wellbeing</p>
+                </article>
+                <article class="zodiac-card" data-name="Libra">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=60" alt="Libra symbol">
+                    <h3>Libra</h3>
+                    <p><strong>Dates:</strong> Sep 23 - Oct 22</p>
+                    <p><strong>Element:</strong> Air</p>
+                    <p><strong>Planet:</strong> Venus</p>
+                    <p><strong>Lucky Color:</strong> Pink</p>
+                    <p><strong>Lucky Number:</strong> 6</p>
+                    <p><strong>Compatible:</strong> Gemini, Aquarius</p>
+                    <p><strong>Strengths:</strong> Charming, diplomatic, artistic</p>
+                    <p><strong>Weaknesses:</strong> Indecisive, people-pleasing</p>
+                    <p><strong>Love:</strong> Romantic and graceful</p>
+                    <p><strong>Career:</strong> Design, law, counseling</p>
+                    <p><strong>Health:</strong> Balance and social harmony help</p>
+                </article>
+                <article class="zodiac-card" data-name="Scorpio">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=60" alt="Scorpio symbol">
+                    <h3>Scorpio</h3>
+                    <p><strong>Dates:</strong> Oct 23 - Nov 21</p>
+                    <p><strong>Element:</strong> Water</p>
+                    <p><strong>Planet:</strong> Pluto</p>
+                    <p><strong>Lucky Color:</strong> Black</p>
+                    <p><strong>Lucky Number:</strong> 8</p>
+                    <p><strong>Compatible:</strong> Cancer, Pisces</p>
+                    <p><strong>Strengths:</strong> Intense, loyal, resourceful</p>
+                    <p><strong>Weaknesses:</strong> Jealous, secretive</p>
+                    <p><strong>Love:</strong> Deep and transformative</p>
+                    <p><strong>Career:</strong> Investigation, healing, research</p>
+                    <p><strong>Health:</strong> Emotional release matters</p>
+                </article>
+                <article class="zodiac-card" data-name="Sagittarius">
+                    <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=300&q=60" alt="Sagittarius symbol">
+                    <h3>Sagittarius</h3>
+                    <p><strong>Dates:</strong> Nov 22 - Dec 21</p>
+                    <p><strong>Element:</strong> Fire</p>
+                    <p><strong>Planet:</strong> Jupiter</p>
+                    <p><strong>Lucky Color:</strong> Purple</p>
+                    <p><strong>Lucky Number:</strong> 9</p>
+                    <p><strong>Compatible:</strong> Aries, Leo</p>
+                    <p><strong>Strengths:</strong> Adventurous, optimistic, honest</p>
+                    <p><strong>Weaknesses:</strong> Restless, blunt</p>
+                    <p><strong>Love:</strong> Free-spirited romance</p>
+                    <p><strong>Career:</strong> Travel, teaching, media</p>
+                    <p><strong>Health:</strong> Movement and adventure heal</p>
+                </article>
+                <article class="zodiac-card" data-name="Capricorn">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=60" alt="Capricorn symbol">
+                    <h3>Capricorn</h3>
+                    <p><strong>Dates:</strong> Dec 22 - Jan 19</p>
+                    <p><strong>Element:</strong> Earth</p>
+                    <p><strong>Planet:</strong> Saturn</p>
+                    <p><strong>Lucky Color:</strong> Brown</p>
+                    <p><strong>Lucky Number:</strong> 4</p>
+                    <p><strong>Compatible:</strong> Taurus, Virgo</p>
+                    <p><strong>Strengths:</strong> Disciplined, ambitious, wise</p>
+                    <p><strong>Weaknesses:</strong> Pessimistic, distant</p>
+                    <p><strong>Love:</strong> Stable and faithful</p>
+                    <p><strong>Career:</strong> Business, management, finance</p>
+                    <p><strong>Health:</strong> Structure and rest support you</p>
+                </article>
+                <article class="zodiac-card" data-name="Aquarius">
+                    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=300&q=60" alt="Aquarius symbol">
+                    <h3>Aquarius</h3>
+                    <p><strong>Dates:</strong> Jan 20 - Feb 18</p>
+                    <p><strong>Element:</strong> Air</p>
+                    <p><strong>Planet:</strong> Uranus</p>
+                    <p><strong>Lucky Color:</strong> Turquoise</p>
+                    <p><strong>Lucky Number:</strong> 11</p>
+                    <p><strong>Compatible:</strong> Gemini, Libra</p>
+                    <p><strong>Strengths:</strong> Visionary, independent, friendly</p>
+                    <p><strong>Weaknesses:</strong> Detached, unpredictable</p>
+                    <p><strong>Love:</strong> Unique and intellectual</p>
+                    <p><strong>Career:</strong> Innovation, tech, social causes</p>
+                    <p><strong>Health:</strong> Social balance matters</p>
+                </article>
+                <article class="zodiac-card" data-name="Pisces">
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=300&q=60" alt="Pisces symbol">
+                    <h3>Pisces</h3>
+                    <p><strong>Dates:</strong> Feb 19 - Mar 20</p>
+                    <p><strong>Element:</strong> Water</p>
+                    <p><strong>Planet:</strong> Neptune</p>
+                    <p><strong>Lucky Color:</strong> Sea Green</p>
+                    <p><strong>Lucky Number:</strong> 7</p>
+                    <p><strong>Compatible:</strong> Cancer, Scorpio</p>
+                    <p><strong>Strengths:</strong> Compassionate, intuitive, artistic</p>
+                    <p><strong>Weaknesses:</strong> Escapist, overly sensitive</p>
+                    <p><strong>Love:</strong> Romantic and sensitive</p>
+                    <p><strong>Career:</strong> Art, music, healing</p>
+                    <p><strong>Health:</strong> Emotional resilience helps</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section horoscope-section" id="horoscope">
+            <div class="section-heading">
+                <small>Horoscope</small>
+                <h2>Daily cosmic readings for every path</h2>
+            </div>
+            <div class="horoscope-tabs">
+                <article>
+                    <h3>Today's Horoscope</h3>
+                    <p>Focus on intention, trust your intuition, and allow cosmic energy to guide your next step.</p>
+                </article>
+                <article>
+                    <h3>Tomorrow</h3>
+                    <p>New opportunities arrive in communication and creative expression. Keep an open heart.</p>
+                </article>
+                <article>
+                    <h3>Weekly</h3>
+                    <p>Balance ambition with rest as planets move through your signs and offer momentum.</p>
+                </article>
+                <article>
+                    <h3>Monthly</h3>
+                    <p>Growth comes from surrendering control and embracing the unexpected.</p>
+                </article>
+                <article>
+                    <h3>Yearly</h3>
+                    <p>Major transformation deepens your relationships, values, and long-term goals.</p>
+                </article>
+                <article>
+                    <h3>Career</h3>
+                    <p>Your leadership is recognized. Trust discipline and creative flair to build momentum.</p>
+                </article>
+                <article>
+                    <h3>Finance</h3>
+                    <p>Invest in learning, share resources wisely, and avoid impulsive spending.</p>
+                </article>
+                <article>
+                    <h3>Love</h3>
+                    <p>Open conversations bring the most magic. Vulnerability creates deeper connection.</p>
+                </article>
+                <article>
+                    <h3>Health</h3>
+                    <p>Rest, hydration, and gentle movement support emotional resilience.</p>
+                </article>
+                <article>
+                    <h3>Education</h3>
+                    <p>Curiosity is powerful. Study, read, and expand your worldview with fresh sources.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section birthchart-section" id="birthchart">
+            <div class="section-heading">
+                <small>Birth Chart</small>
+                <h2>Your celestial fingerprint</h2>
+                <p>Birth charts map the planets at your exact time and place of birth. They are the key to personal astrology.</p>
+            </div>
+            <div class="card-grid">
+                <article>
+                    <h3>What it reveals</h3>
+                    <p>Sun sign, moon sign, rising sign, planetary houses, and natal aspects combine to show your unique life path.</p>
+                </article>
+                <article>
+                    <h3>Why it matters</h3>
+                    <p>Understanding your chart gives clarity to strengths, challenges, and karmic lessons.</p>
+                </article>
+                <article>
+                    <h3>Core components</h3>
+                    <ul>
+                        <li>Sun - identity</li>
+                        <li>Moon - emotions</li>
+                        <li>Rising - first impression</li>
+                        <li>Houses - life areas</li>
+                    </ul>
+                </article>
+            </div>
+            <aside class="chart-visual">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=600&q=60" alt="Birth chart visual">
+                    <figcaption>Modern astrological birth chart in glassmorphism style.</figcaption>
+                </figure>
+            </aside>
+        </section>
+
+        <section class="section planets-section" id="planets">
+            <div class="section-heading">
+                <small>Planets</small>
+                <h2>Major astrological planets and their influence</h2>
+            </div>
+            <div class="planets-grid">
+                <article>
+                    <img src="https://images.unsplash.com/photo-1502136969935-8d8e6ecba3aa?auto=format&fit=crop&w=120&q=60" alt="Sun icon">
+                    <h3>Sun</h3>
+                    <p>Represents identity, ego, and life purpose.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=120&q=60" alt="Moon icon">
+                    <h3>Moon</h3>
+                    <p>Represents emotions, intuition, and instincts.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1547934579-7f6db7976570?auto=format&fit=crop&w=120&q=60" alt="Mercury icon">
+                    <h3>Mercury</h3>
+                    <p>Represents communication, thought, and travel.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=120&q=60" alt="Venus icon">
+                    <h3>Venus</h3>
+                    <p>Represents love, beauty, and values.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=120&q=60" alt="Mars icon">
+                    <h3>Mars</h3>
+                    <p>Represents energy, drive, and courage.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=120&q=60" alt="Jupiter icon">
+                    <h3>Jupiter</h3>
+                    <p>Represents expansion, luck, and wisdom.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=120&q=60" alt="Saturn icon">
+                    <h3>Saturn</h3>
+                    <p>Represents structure, discipline, and maturity.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1516600164261-7221ee446f3f?auto=format&fit=crop&w=120&q=60" alt="Rahu icon">
+                    <h3>Rahu</h3>
+                    <p>Represents karmic desire, ambition, and unexpected shifts.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1513647581217-5e8b24b6c66f?auto=format&fit=crop&w=120&q=60" alt="Ketu icon">
+                    <h3>Ketu</h3>
+                    <p>Represents past-life lessons, detachment, and spiritual release.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=120&q=60" alt="Uranus icon">
+                    <h3>Uranus</h3>
+                    <p>Represents innovation, rebellion, and sudden insight.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=120&q=60" alt="Neptune icon">
+                    <h3>Neptune</h3>
+                    <p>Represents dreams, intuition, and spiritual depth.</p>
+                </article>
+                <article>
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=120&q=60" alt="Pluto icon">
+                    <h3>Pluto</h3>
+                    <p>Represents transformation, power, and rebirth.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section numerology-section" id="numerology">
+            <div class="section-heading">
+                <small>Numerology</small>
+                <h2>Number meanings for personal power</h2>
+            </div>
+            <div class="numerology-grid">
+                <article>
+                    <h3>1</h3>
+                    <p><strong>Meaning:</strong> Leadership</p>
+                    <p><strong>Personality:</strong> Ambitious, driven</p>
+                    <p><strong>Lucky Colors:</strong> Gold, red</p>
+                    <p><strong>Careers:</strong> Executive, entrepreneur</p>
+                </article>
+                <article>
+                    <h3>2</h3>
+                    <p><strong>Meaning:</strong> Harmony</p>
+                    <p><strong>Personality:</strong> Diplomatic, sensitive</p>
+                    <p><strong>Lucky Colors:</strong> Silver, blue</p>
+                    <p><strong>Careers:</strong> Counselor, artist</p>
+                </article>
+                <article>
+                    <h3>3</h3>
+                    <p><strong>Meaning:</strong> Creativity</p>
+                    <p><strong>Personality:</strong> Expressive, social</p>
+                    <p><strong>Lucky Colors:</strong> Yellow, orange</p>
+                    <p><strong>Careers:</strong> Writer, designer</p>
+                </article>
+                <article>
+                    <h3>4</h3>
+                    <p><strong>Meaning:</strong> Stability</p>
+                    <p><strong>Personality:</strong> Practical, reliable</p>
+                    <p><strong>Lucky Colors:</strong> Brown, emerald</p>
+                    <p><strong>Careers:</strong> Engineer, administrator</p>
+                </article>
+                <article>
+                    <h3>5</h3>
+                    <p><strong>Meaning:</strong> Freedom</p>
+                    <p><strong>Personality:</strong> Adventurous, curious</p>
+                    <p><strong>Lucky Colors:</strong> Indigo, turquoise</p>
+                    <p><strong>Careers:</strong> Traveler, marketer</p>
+                </article>
+                <article>
+                    <h3>6</h3>
+                    <p><strong>Meaning:</strong> Service</p>
+                    <p><strong>Personality:</strong> Caring, responsible</p>
+                    <p><strong>Lucky Colors:</strong> Green, rose</p>
+                    <p><strong>Careers:</strong> Teacher, healer</p>
+                </article>
+                <article>
+                    <h3>7</h3>
+                    <p><strong>Meaning:</strong> Wisdom</p>
+                    <p><strong>Personality:</strong> Analytical, spiritual</p>
+                    <p><strong>Lucky Colors:</strong> Violet, silver</p>
+                    <p><strong>Careers:</strong> Researcher, scholar</p>
+                </article>
+                <article>
+                    <h3>8</h3>
+                    <p><strong>Meaning:</strong> Power</p>
+                    <p><strong>Personality:</strong> Ambitious, strategic</p>
+                    <p><strong>Lucky Colors:</strong> Black, gray</p>
+                    <p><strong>Careers:</strong> Executive, investor</p>
+                </article>
+                <article>
+                    <h3>9</h3>
+                    <p><strong>Meaning:</strong> Completion</p>
+                    <p><strong>Personality:</strong> Compassionate, visionary</p>
+                    <p><strong>Lucky Colors:</strong> Crimson, gold</p>
+                    <p><strong>Careers:</strong> Guide, counselor</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section moon-section" id="moonphases">
+            <div class="section-heading">
+                <small>Moon Phases</small>
+                <h2>Cycle of lunar energy</h2>
+            </div>
+            <div class="moon-grid">
+                <article><h3>New Moon</h3><p>Plant seeds for intention.</p></article>
+                <article><h3>Waxing Crescent</h3><p>Grow momentum.</p></article>
+                <article><h3>First Quarter</h3><p>Take decisive action.</p></article>
+                <article><h3>Waxing Gibbous</h3><p>Refine your path.</p></article>
+                <article><h3>Full Moon</h3><p>Harvest energy.</p></article>
+                <article><h3>Waning Gibbous</h3><p>Release what no longer serves.</p></article>
+                <article><h3>Last Quarter</h3><p>Review and adjust.</p></article>
+                <article><h3>Waning Crescent</h3><p>Rest and reflect.</p></article>
+            </div>
+        </section>
+
+        <section class="section table-section">
+            <div class="section-heading">
+                <small>Astrology Table</small>
+                <h2>Zodiac comparison at a glance</h2>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Zodiac</th>
+                            <th>Element</th>
+                            <th>Planet</th>
+                            <th>Lucky Color</th>
+                            <th>Lucky Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Aries</td><td>Fire</td><td>Mars</td><td>Red</td><td>9</td></tr>
+                        <tr><td>Taurus</td><td>Earth</td><td>Venus</td><td>Green</td><td>6</td></tr>
+                        <tr><td>Gemini</td><td>Air</td><td>Mercury</td><td>Yellow</td><td>5</td></tr>
+                        <tr><td>Cancer</td><td>Water</td><td>Moon</td><td>Silver</td><td>2</td></tr>
+                        <tr><td>Leo</td><td>Fire</td><td>Sun</td><td>Gold</td><td>1</td></tr>
+                        <tr><td>Virgo</td><td>Earth</td><td>Mercury</td><td>Blue</td><td>3</td></tr>
+                        <tr><td>Libra</td><td>Air</td><td>Venus</td><td>Pink</td><td>6</td></tr>
+                        <tr><td>Scorpio</td><td>Water</td><td>Pluto</td><td>Black</td><td>8</td></tr>
+                        <tr><td>Sagittarius</td><td>Fire</td><td>Jupiter</td><td>Purple</td><td>9</td></tr>
+                        <tr><td>Capricorn</td><td>Earth</td><td>Saturn</td><td>Brown</td><td>4</td></tr>
+                        <tr><td>Aquarius</td><td>Air</td><td>Uranus</td><td>Turquoise</td><td>11</td></tr>
+                        <tr><td>Pisces</td><td>Water</td><td>Neptune</td><td>Sea Green</td><td>7</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section gallery-section" id="gallery">
+            <div class="section-heading">
+                <small>Image Gallery</small>
+                <h2>Cosmic visuals for your journey</h2>
+            </div>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=400&q=60" alt="Galaxy image">
+                    <figcaption>Galaxy patterns</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=400&q=60" alt="Stars image">
+                    <figcaption>Shimmering stars</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=60" alt="Moon image">
+                    <figcaption>Moon phases</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=60" alt="Planet image">
+                    <figcaption>Planetary icons</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1517586979031-1fa0b8f3a054?auto=format&fit=crop&w=400&q=60" alt="Constellation image">
+                    <figcaption>Constellation art</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1511789099998-3f2fa7146011?auto=format&fit=crop&w=400&q=60" alt="Crystal ball image">
+                    <figcaption>Crystal ball energy</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section media-section" id="media">
+            <div class="section-heading">
+                <small>Media</small>
+                <h2>Audio, video and immersive astrology content</h2>
+            </div>
+            <div class="media-grid">
+                <article>
+                    <h3>Relaxing Meditation Music</h3>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </article>
+                <article>
+                    <h3>Night Sky Video</h3>
+                    <video controls muted loop poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-night-sky-with-clouds-869-small.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </article>
+                <article>
+                    <h3>Astrology Guide</h3>
+                    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80" alt="Astrology art guide" />
+                    <p>Explore a curated guide to zodiac signs, birth charts, and seasonal cosmic energy.</p>
+                </article>
+                <article>
+                    <h3>Astrology Documentary</h3>
+                    <iframe src="https://www.youtube.com/embed/9yF4n9Nw4bI" title="Astrology Documentary" allowfullscreen></iframe>
+                </article>
+            </div>
+        </section>
+
+        <section class="section form-section" id="horoscopeForm">
+            <div class="section-heading">
+                <small>Get Your Horoscope</small>
+                <h2>Interactive cosmic reading form</h2>
+            </div>
+            <form id="horoscopeFormElement" novalidate>
+                <fieldset>
+                    <legend>Personal details</legend>
+                    <div class="form-grid">
+                        <label for="fullName">Full Name <span>*</span>
+                            <input type="text" id="fullName" name="fullName" placeholder="Luna Star" required>
+                        </label>
+                        <label for="email">Email <span>*</span>
+                            <input type="email" id="email" name="email" placeholder="luna@starverse.com" required>
+                        </label>
+                        <label for="phone">Phone
+                            <input type="tel" id="phone" name="phone" placeholder="+1234567890">
+                        </label>
+                        <label for="birthDate">Birth Date <span>*</span>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </label>
+                        <label for="birthTime">Birth Time
+                            <input type="time" id="birthTime" name="birthTime">
+                        </label>
+                        <label for="birthPlace">Birth Place
+                            <input type="text" id="birthPlace" name="birthPlace" placeholder="City, Country">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Cosmic preferences</legend>
+                    <div class="form-grid form-grid-columns">
+                        <label for="signSelect">Zodiac Sign</label>
+                            <select id="signSelect" name="signSelect" required>
+                                <option value="">Choose your sign</option>
+                                <option value="aries">Aries</option>
+                                <option value="taurus">Taurus</option>
+                                <option value="gemini">Gemini</option>
+                                <option value="cancer">Cancer</option>
+                                <option value="leo">Leo</option>
+                                <option value="virgo">Virgo</option>
+                                <option value="libra">Libra</option>
+                                <option value="scorpio">Scorpio</option>
+                                <option value="sagittarius">Sagittarius</option>
+                                <option value="capricorn">Capricorn</option>
+                                <option value="aquarius">Aquarius</option>
+                                <option value="pisces">Pisces</option>
+                            </select>
+                        <label for="favoriteColor">Favorite cosmic color
+                            <input type="color" id="favoriteColor" name="favoriteColor" value="#8d78ff">
+                        </label>
+                        <label for="birthMonth">Birth Month
+                            <input type="month" id="birthMonth" name="birthMonth">
+                        </label>
+                        <label for="moonPhase">Moon Phase
+                            <input type="week" id="moonPhase" name="moonPhase">
+                        </label>
+                        <label for="energy">Energy level
+                            <input type="range" id="energy" name="energy" min="0" max="100" value="50">
+                        </label>
+                        <label for="source">How did you find us?</label>
+                            <input list="sourceOptions" id="source" name="source" placeholder="Search...">
+                            <datalist id="sourceOptions">
+                                <option value="Friend">
+                                <option value="Social media">
+                                <option value="Search engine">
+                                <option value="Astrology event">
+                            </datalist>
+                        <label>Gender</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="gender" value="female"> Female</label>
+                                <label><input type="radio" name="gender" value="male"> Male</label>
+                                <label><input type="radio" name="gender" value="other"> Other</label>
+                            </div>
+                        <label>Interests</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="interest" value="horoscope"> Horoscope</label>
+                                <label><input type="checkbox" name="interest" value="birthchart"> Birth Chart</label>
+                                <label><input type="checkbox" name="interest" value="numerology"> Numerology</label>
+                            </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message & uploads</legend>
+                    <label for="favoriteGift">Favorite cosmic item</label>
+                        <input type="search" id="favoriteGift" name="favoriteGift" placeholder="Crystal, amulet, etc.">
+                    <label for="lifeStory">Tell us your star story</label>
+                        <textarea id="lifeStory" name="lifeStory" rows="4" placeholder="Share your dream or question..."></textarea>
+                    <label for="profilePic">Upload a photo</label>
+                        <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                </fieldset>
+
+                <div class="form-meta">
+                    <progress id="formProgress" value="0" max="100"></progress>
+                    <meter value="50" min="0" max="100">50%</meter>
+                    <output id="progressOutput">0% complete</output>
+                </div>
+                <div class="form-actions">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="section faq-section">
+            <div class="section-heading">
+                <small>FAQ</small>
+                <h2>Curious about cosmic guidance?</h2>
+            </div>
+            <details>
+                <summary>Is astrology scientifically valid?</summary>
+                <p>Astrology is a symbolic language and a system for self-reflection, not a laboratory science.</p>
+            </details>
+            <details>
+                <summary>How accurate are horoscopes?</summary>
+                <p>Horoscopes provide broad guidance; personal birth charts will deliver deeper accuracy.</p>
+            </details>
+            <details>
+                <summary>Can numerology and astrology work together?</summary>
+                <p>Yes, numerology adds another layer of character insight and timing to astrology.</p>
+            </details>
+        </section>
+
+        <section class="section testimonials-section">
+            <div class="section-heading">
+                <small>Testimonials</small>
+                <h2>What our users feel</h2>
+            </div>
+            <div class="testimonial-grid">
+                <article>
+                    <p>"StarVerse helped me understand my strengths and find clarity in a confusing year."</p>
+                    <strong>Aanya R.</strong>
+                </article>
+                <article>
+                    <p>"The birth chart guide was beautiful and easy to use. I loved the daily cosmic tips."</p>
+                    <strong>Jayden M.</strong>
+                </article>
+                <article>
+                    <p>"The site feels premium and mystical, and the horoscope reading was spot on."</p>
+                    <strong>Priya S.</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="section-heading">
+                <small>Contact</small>
+                <h2>Reach the StarVerse team</h2>
+            </div>
+            <div class="contact-grid">
+                <article>
+                    <h3>Address</h3>
+                    <p>1100 Cosmic Way, Celestial City, Universe</p>
+                    <h3>Phone</h3>
+                    <p>+1 (800) 777-STAR</p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:contact@starverse.com">contact@starverse.com</a></p>
+                </article>
+                <article class="social-links">
+                    <h3>Social</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                    <h3>Newsletter</h3>
+                    <form id="newsletterForm">
+                        <label for="newsletterEmail">Subscribe</label>
+                        <input type="email" id="newsletterEmail" placeholder="your@email.com" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </article>
+                <article class="map-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0195916252977!2d-122.41941538468182!3d37.77492927975981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b0d2cf7e1%3A0x27d0e2f60f5cd8f0!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1616430602253!5m2!1sen!2sus" title="Google Maps location"></iframe>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Newsletter</h4>
+                <p>Stay tuned to cosmic updates and astrology insights.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2026 StarVerse. All rights reserved.</p>
+            <p>Designed with cosmic care.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
