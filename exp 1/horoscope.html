@@ -61,6 +61,24 @@
             margin-bottom: 15px;
             line-height: 1.6;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        th, td {
+            border: 1px solid #cbdfe8;
+            padding: 10px;
+            text-align: left;
+        }
+        thead th {
+            background-color: #e6f7ff;
+            color: #045a6b;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f8fbff;
+        }
     </style>
 </head>
 <body>
@@ -78,6 +96,35 @@
     <div id="horoscope-header">
         <h2>Today's Horoscope</h2>
         <p>Get your personalized horoscope reading for today. Find your zodiac sign and see what the stars have in store for you!</p>
+    </div>
+
+    <div id="quick-reference">
+        <h2>Quick Reference</h2>
+        <table>
+            <caption style="caption-side: top; text-align: left; padding: 8px 0; font-weight: bold; color: #045a6b;">Horoscope Quick Reference</caption>
+            <thead>
+                <tr>
+                    <th>Sign</th>
+                    <th>Dates</th>
+                    <th>Lucky Color</th>
+                    <th>Lucky Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Aries</td><td>Mar 21 - Apr 19</td><td>Red</td><td>7</td></tr>
+                <tr><td>Taurus</td><td>Apr 20 - May 20</td><td>Green</td><td>6</td></tr>
+                <tr><td>Gemini</td><td>May 21 - Jun 20</td><td>Yellow</td><td>5</td></tr>
+                <tr><td>Cancer</td><td>Jun 21 - Jul 22</td><td>Silver</td><td>2</td></tr>
+                <tr><td>Leo</td><td>Jul 23 - Aug 22</td><td>Gold</td><td>1</td></tr>
+                <tr><td>Virgo</td><td>Aug 23 - Sep 22</td><td>Blue</td><td>3</td></tr>
+                <tr><td>Libra</td><td>Sep 23 - Oct 22</td><td>Pink</td><td>6</td></tr>
+                <tr><td>Scorpio</td><td>Oct 23 - Nov 21</td><td>Black</td><td>8</td></tr>
+                <tr><td>Sagittarius</td><td>Nov 22 - Dec 21</td><td>Purple</td><td>9</td></tr>
+                <tr><td>Capricorn</td><td>Dec 22 - Jan 19</td><td>Brown</td><td>4</td></tr>
+                <tr><td>Aquarius</td><td>Jan 20 - Feb 18</td><td>Turquoise</td><td>11</td></tr>
+                <tr><td>Pisces</td><td>Feb 19 - Mar 20</td><td>Sea Green</td><td>7</td></tr>
+            </tbody>
+        </table>
     </div>
 
     <div class="horoscope">
