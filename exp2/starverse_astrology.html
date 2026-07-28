@@ -5,313 +5,343 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StarVerse - Astrology & Horoscope</title>
 </head>
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(130,70,220,.35), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(30,150,255,.25), transparent 25%),
+        linear-gradient(135deg,#09051f 0%,#171044 45%,#071b3d 100%);
+    background-attachment:fixed;
+}
+.header{
+    padding:35px 20px;
+    background:rgba(10,5,35,.65);
+}
+.section{
+    width:92%;
+    max-width:1100px;
+    margin:30px auto;
+    padding:25px;
+    box-sizing:border-box;
+    background:rgba(18,10,50,.78);
+    border:1px solid rgba(180,140,255,.35);
+    border-radius:18px;
+}
+.form-box{
+    width:90%;
+    max-width:850px;
+    margin:30px auto;
+    padding:30px;
+    box-sizing:border-box;
+    background:rgba(12,8,42,.92);
+    border:1px solid #8b6cff;
+    border-radius:18px;
+}
+fieldset{
+    margin:20px 0;
+    padding:22px;
+    border:1px solid rgba(180,150,255,.55);
+    border-radius:12px;
+}
+legend{
+    padding:0 12px;
+    font-size:18px;
+    font-weight:bold;
+}
+.form-row{
+    display:flex;
+    align-items:center;
+    margin:14px 0;
+    gap:15px;
+}
+.form-row label{
+    width:180px;
+    text-align:right;
+    font-weight:bold;
+}
+.form-row input,
+.form-row select,
+.form-row textarea{
+    flex:1;
+    box-sizing:border-box;
+    padding:10px;
+    border:1px solid #9c82ff;
+    border-radius:7px;
+    background:#f8f6ff;
+    color:#111;
+}
+.form-options{
+    margin:14px 0 14px 195px;
+    line-height:2;
+}
+.form-actions{
+    text-align:center;
+    margin-top:20px;
+}
+.form-actions input{
+    padding:11px 22px;
+    margin:5px;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+}
+.media-box{
+    max-width:700px;
+    width:100%;
+    margin:auto;
+}
+video{
+    max-width:100%;
+}
+@media(max-width:650px){
+    .form-row{display:block;}
+    .form-row label{display:block;width:auto;text-align:left;margin-bottom:7px;}
+    .form-options{margin-left:0;}
+}
+</style>
 
-<body text="white" link="#ffd166" vlink="#d8b4fe" alink="white"
-style="margin:0;font-family:Arial,Helvetica,sans-serif;background-color:#08051a;background-image:linear-gradient(rgba(8,5,26,0.88),rgba(8,5,26,0.94)),url('https://images.unsplash.com/photo-1534791547706-9b7c5f5b3b8a?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-attachment:fixed;background-position:center;">
+<body link="#ffd166" vlink="#d8b4fe">
 
-<!-- HEADER -->
-<div align="center">
+<!-- Header -->
+<div align="center" class="header">
 <h1>✨ STARVERSE ✨</h1>
 <h2>Astrology & Horoscope</h2>
 <p>Explore the zodiac, discover your horoscope, and learn more about the stars.</p>
-<a href="#home">Home</a> |
-<a href="#zodiac">Zodiac Signs</a> |
-<a href="#horoscope">Horoscope</a> |
-<a href="#media">Media</a> |
-<a href="#form">Horoscope Form</a>
+<a href="#home">Home</a> | <a href="#zodiac">Zodiac Signs</a> | <a href="#horoscope">Horoscope</a> | <a href="#media">Media</a> | <a href="#form">Horoscope Form</a>
 </div>
-
 <hr>
 
-<!-- HOME -->
-<div id="home">
+<div id="home" class="section">
 <h2>🌌 Welcome to StarVerse</h2>
-<p>Astrology is a system that studies the relationship between celestial bodies and human life. The zodiac is divided into twelve signs, each associated with different characteristics and symbols.</p>
-<p align="center">
-<img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=85"
-alt="Galaxy and stars" width="650" height="360">
-</p>
+<p>Astrology studies the relationship between celestial bodies and human life. The zodiac is divided into twelve signs.</p>
+<p align="center"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=85" alt="Galaxy and stars" width="650" height="360"></p>
 </div>
-
 <hr>
 
-<!-- ZODIAC TABLE -->
-<div id="zodiac">
+<div id="zodiac" class="section">
 <h2 align="center">♈ The 12 Zodiac Signs</h2>
-<p align="center">Explore all twelve zodiac signs and their characteristics.</p>
-
-<table border="1" cellpadding="12" cellspacing="0" width="96%" align="center"
-style="background-color:rgba(25,12,55,0.92);border-color:#8b5cf6;">
-
-<tr>
-<th style="background-color:#32145f;">Sign</th>
-<th style="background-color:#32145f;">Zodiac Symbol</th>
-<th style="background-color:#32145f;">Date Range</th>
-<th style="background-color:#32145f;">Element</th>
-<th style="background-color:#32145f;">Traits</th>
-<th style="background-color:#32145f;">Horoscope</th>
-</tr>
-
-<tr align="center"><td><b>Aries ♈</b></td><td style="font-size:60px;">♈</td><td>Mar 21 – Apr 19</td><td>Fire 🔥</td><td>Bold, energetic, confident</td><td>Take initiative and trust yourself.</td></tr>
-<tr align="center"><td><b>Taurus ♉</b></td><td style="font-size:60px;">♉</td><td>Apr 20 – May 20</td><td>Earth 🌍</td><td>Patient, reliable, practical</td><td>Stay steady and value stability.</td></tr>
-<tr align="center"><td><b>Gemini ♊</b></td><td style="font-size:60px;">♊</td><td>May 21 – Jun 20</td><td>Air 💨</td><td>Curious, social, adaptable</td><td>A new conversation may bring an opportunity.</td></tr>
-<tr align="center"><td><b>Cancer ♋</b></td><td style="font-size:60px;">♋</td><td>Jun 21 – Jul 22</td><td>Water 💧</td><td>Caring, emotional, intuitive</td><td>Listen to your intuition today.</td></tr>
-<tr align="center"><td><b>Leo ♌</b></td><td style="font-size:60px;">♌</td><td>Jul 23 – Aug 22</td><td>Fire 🔥</td><td>Confident, creative, generous</td><td>Let your creativity shine.</td></tr>
-<tr align="center"><td><b>Virgo ♍</b></td><td style="font-size:60px;">♍</td><td>Aug 23 – Sep 22</td><td>Earth 🌍</td><td>Analytical, organized, thoughtful</td><td>Small improvements create big results.</td></tr>
-<tr align="center"><td><b>Libra ♎</b></td><td style="font-size:60px;">♎</td><td>Sep 23 – Oct 22</td><td>Air 💨</td><td>Balanced, diplomatic, charming</td><td>Choose harmony and balance.</td></tr>
-<tr align="center"><td><b>Scorpio ♏</b></td><td style="font-size:60px;">♏</td><td>Oct 23 – Nov 21</td><td>Water 💧</td><td>Passionate, focused, mysterious</td><td>Use your determination to overcome obstacles.</td></tr>
-<tr align="center"><td><b>Sagittarius ♐</b></td><td style="font-size:60px;">♐</td><td>Nov 22 – Dec 21</td><td>Fire 🔥</td><td>Adventurous, optimistic, honest</td><td>Explore a new idea or direction.</td></tr>
-<tr align="center"><td><b>Capricorn ♑</b></td><td style="font-size:60px;">♑</td><td>Dec 22 – Jan 19</td><td>Earth 🌍</td><td>Disciplined, ambitious, responsible</td><td>Consistency will move you toward your goal.</td></tr>
-<tr align="center"><td><b>Aquarius ♒</b></td><td style="font-size:60px;">♒</td><td>Jan 20 – Feb 18</td><td>Air 💨</td><td>Independent, innovative, original</td><td>Think differently and embrace originality.</td></tr>
-<tr align="center"><td><b>Pisces ♓</b></td><td style="font-size:60px;">♓</td><td>Feb 19 – Mar 20</td><td>Water 💧</td><td>Compassionate, imaginative, sensitive</td><td>Let your imagination guide you.</td></tr>
-
+<table border="1" cellpadding="12" cellspacing="0" width="96%" align="center" style="background:rgba(25,12,55,.92);border-color:#8b5cf6;">
+<tr><th>Sign</th><th>Symbol</th><th>Date Range</th><th>Element</th><th>Traits</th><th>Horoscope</th></tr>
+<tr align="center"><td>Aries ♈</td><td style="font-size:55px">♈</td><td>Mar 21 – Apr 19</td><td>Fire 🔥</td><td>Bold, energetic</td><td>Take initiative.</td></tr>
+<tr align="center"><td>Taurus ♉</td><td style="font-size:55px">♉</td><td>Apr 20 – May 20</td><td>Earth 🌍</td><td>Patient, reliable</td><td>Value stability.</td></tr>
+<tr align="center"><td>Gemini ♊</td><td style="font-size:55px">♊</td><td>May 21 – Jun 20</td><td>Air 💨</td><td>Curious, adaptable</td><td>Share your ideas.</td></tr>
+<tr align="center"><td>Cancer ♋</td><td style="font-size:55px">♋</td><td>Jun 21 – Jul 22</td><td>Water 💧</td><td>Caring, intuitive</td><td>Trust your intuition.</td></tr>
+<tr align="center"><td>Leo ♌</td><td style="font-size:55px">♌</td><td>Jul 23 – Aug 22</td><td>Fire 🔥</td><td>Confident, creative</td><td>Let creativity shine.</td></tr>
+<tr align="center"><td>Virgo ♍</td><td style="font-size:55px">♍</td><td>Aug 23 – Sep 22</td><td>Earth 🌍</td><td>Analytical, organized</td><td>Improve step by step.</td></tr>
+<tr align="center"><td>Libra ♎</td><td style="font-size:55px">♎</td><td>Sep 23 – Oct 22</td><td>Air 💨</td><td>Balanced, diplomatic</td><td>Choose harmony.</td></tr>
+<tr align="center"><td>Scorpio ♏</td><td style="font-size:55px">♏</td><td>Oct 23 – Nov 21</td><td>Water 💧</td><td>Focused, passionate</td><td>Stay determined.</td></tr>
+<tr align="center"><td>Sagittarius ♐</td><td style="font-size:55px">♐</td><td>Nov 22 – Dec 21</td><td>Fire 🔥</td><td>Adventurous, honest</td><td>Explore something new.</td></tr>
+<tr align="center"><td>Capricorn ♑</td><td style="font-size:55px">♑</td><td>Dec 22 – Jan 19</td><td>Earth 🌍</td><td>Disciplined, ambitious</td><td>Keep working toward goals.</td></tr>
+<tr align="center"><td>Aquarius ♒</td><td style="font-size:55px">♒</td><td>Jan 20 – Feb 18</td><td>Air 💨</td><td>Independent, innovative</td><td>Think differently.</td></tr>
+<tr align="center"><td>Pisces ♓</td><td style="font-size:55px">♓</td><td>Feb 19 – Mar 20</td><td>Water 💧</td><td>Imaginative, sensitive</td><td>Follow your imagination.</td></tr>
 </table>
 </div>
-
 <hr>
 
-<!-- HOROSCOPE -->
-<div id="horoscope">
+<div id="horoscope" class="section">
 <h2>🔮 Today's Horoscope</h2>
-<h3>♈ Aries</h3><p>Your confidence is strong today. Use your energy to begin something meaningful.</p>
-<h3>♉ Taurus</h3><p>Patience brings better results. Focus on stability.</p>
-<h3>♊ Gemini</h3><p>Communication is your strength today. Share your ideas.</p>
-<h3>♋ Cancer</h3><p>Your intuition is powerful. Spend time with people you trust.</p>
-<h3>♌ Leo</h3><p>Your leadership can inspire others. Let your creativity shine.</p>
-<h3>♍ Virgo</h3><p>Organize your priorities and complete important tasks.</p>
-<h3>♎ Libra</h3><p>Balance is important. A calm discussion can solve disagreements.</p>
-<h3>♏ Scorpio</h3><p>Stay focused on your goals and overcome challenges.</p>
-<h3>♐ Sagittarius</h3><p>A new experience can broaden your perspective.</p>
-<h3>♑ Capricorn</h3><p>Your discipline is your advantage. Keep working toward your ambitions.</p>
-<h3>♒ Aquarius</h3><p>Creative thinking can lead to a fresh solution.</p>
-<h3>♓ Pisces</h3><p>Follow your imagination while keeping your responsibilities in mind.</p>
+<h3>♈ Aries</h3><p>Your confidence is strong today.</p>
+<h3>♉ Taurus</h3><p>Patience brings better results.</p>
+<h3>♊ Gemini</h3><p>Communication is your strength.</p>
+<h3>♋ Cancer</h3><p>Listen to your intuition.</p>
+<h3>♌ Leo</h3><p>Let your creativity shine.</p>
+<h3>♍ Virgo</h3><p>Organize your priorities.</p>
+<h3>♎ Libra</h3><p>Choose balance and harmony.</p>
+<h3>♏ Scorpio</h3><p>Stay focused on your goals.</p>
+<h3>♐ Sagittarius</h3><p>Explore a new direction.</p>
+<h3>♑ Capricorn</h3><p>Consistency brings progress.</p>
+<h3>♒ Aquarius</h3><p>Creative thinking helps today.</p>
+<h3>♓ Pisces</h3><p>Let your imagination guide you.</p>
 </div>
-
 <hr>
 
-<!-- MEDIA -->
-<div id="media" align="center">
+<!-- Media -->
+<div id="media" align="center" class="section">
 <h2>🎵 Astrology Media</h2>
-
-<h3>🎵 Relaxing Astrology Audio</h3>
-<audio controls>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-Your browser does not support audio.
-</audio>
-
+<h3>🎵 Audio</h3>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
 <br><br>
 
 <h3>🔮 Astrology & Horoscope Video</h3>
-
-<!-- Exact YouTube video requested by the user -->
-<iframe width="700" height="400"
-src="https://www.youtube.com/embed/AqRbDRPijNU"
-title="Astrology and Horoscope Video"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-<p>
-<a href="https://www.youtube.com/watch?v=AqRbDRPijNU" target="_blank">
-▶ Watch this video on YouTube
-</a>
-</p>
+<!-- This is a normal HTML5 MP4 video and does not depend on YouTube embedding. -->
+<video width="700" height="400" controls poster="https://images.unsplash.com/photo-1534791547706-9b7c5f5b3b8a?auto=format&fit=crop&w=1000&q=80">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+Your browser does not support the video element.
+</video>
+<p><b>HTML5 video demonstration</b></p>
+<p><a href="https://www.youtube.com/watch?v=AqRbDRPijNU" target="_blank">▶ Open your requested astrology video on YouTube</a></p>
 </div>
-
 <hr>
 
-<!-- IFRAME -->
-<div align="center">
+<div align="center" class="section">
 <h2>🌠 Learn About Astrology</h2>
-<iframe src="https://en.wikipedia.org/wiki/Astrology"
-width="90%" height="400" title="Astrology Information"></iframe>
+<iframe src="https://en.wikipedia.org/wiki/Astrology" width="90%" height="400" title="Astrology Information"></iframe>
 </div>
-
 <hr>
 
-<!-- EMBED -->
-<div align="center">
+<div align="center" class="section">
 <h2>📚 Astrology Reference</h2>
 <embed src="https://www.example.com/" width="700" height="300" type="text/html">
 </div>
-
 <hr>
 
-<!-- FORM -->
-<div id="form">
-<h2>📝 Horoscope Registration Form</h2>
+<!-- Form -->
+<div id="form" class="form-box">
+<h2 align="center">📝 Horoscope Registration Form</h2>
+<p align="center">Enter your details to explore your astrology preferences.</p>
 
 <form action="#" method="get">
 
 <fieldset>
-<legend><b>Personal Information</b></legend>
+<legend>👤 Personal Information</legend>
 
+<div class="form-row">
 <label for="fullname">Full Name:</label>
 <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="email">Email:</label>
 <input type="email" id="email" name="email" placeholder="example@email.com" required>
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="password">Password:</label>
 <input type="password" id="password" name="password">
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="phone">Phone:</label>
 <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="dob">Date of Birth:</label>
 <input type="date" id="dob" name="dob">
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="birthtime">Birth Time:</label>
 <input type="time" id="birthtime" name="birthtime">
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="birthmonth">Birth Month:</label>
 <input type="month" id="birthmonth" name="birthmonth">
-<br><br>
+</div>
 
+<div class="form-row">
 <label for="datetime">Birth Date & Time:</label>
 <input type="datetime-local" id="datetime" name="datetime">
-
+</div>
 </fieldset>
 
-<br>
-
 <fieldset>
-<legend><b>Astrology Preferences</b></legend>
+<legend>🔮 Astrology Preferences</legend>
 
-<label for="zodiacsign">Choose your Zodiac Sign:</label>
-
+<div class="form-row">
+<label for="zodiacsign">Zodiac Sign:</label>
 <select id="zodiacsign" name="zodiacsign">
-<option value="aries">Aries ♈</option>
-<option value="taurus">Taurus ♉</option>
-<option value="gemini">Gemini ♊</option>
-<option value="cancer">Cancer ♋</option>
-<option value="leo">Leo ♌</option>
-<option value="virgo">Virgo ♍</option>
-<option value="libra">Libra ♎</option>
-<option value="scorpio">Scorpio ♏</option>
-<option value="sagittarius">Sagittarius ♐</option>
-<option value="capricorn">Capricorn ♑</option>
-<option value="aquarius">Aquarius ♒</option>
-<option value="pisces">Pisces ♓</option>
+<option>Aries ♈</option>
+<option>Taurus ♉</option>
+<option>Gemini ♊</option>
+<option>Cancer ♋</option>
+<option>Leo ♌</option>
+<option>Virgo ♍</option>
+<option>Libra ♎</option>
+<option>Scorpio ♏</option>
+<option>Sagittarius ♐</option>
+<option>Capricorn ♑</option>
+<option>Aquarius ♒</option>
+<option>Pisces ♓</option>
 </select>
+</div>
 
-<br><br>
+<div class="form-row">
+<label for="lucky">Lucky Number:</label>
+<input type="number" id="lucky" min="1" max="99" placeholder="1 - 99">
+</div>
 
-<p>Preferred Horoscope:</p>
+<div class="form-row">
+<label for="interest">Interest Level:</label>
+<input type="range" id="interest" min="0" max="100" value="75">
+</div>
 
-<input type="radio" id="daily" name="horoscope" value="daily">
+<div class="form-options">
+<b>Horoscope Type:</b><br>
+<input type="radio" name="h" id="daily" value="daily">
 <label for="daily">Daily</label>
-
-<input type="radio" id="weekly" name="horoscope" value="weekly">
+<input type="radio" name="h" id="weekly" value="weekly">
 <label for="weekly">Weekly</label>
-
-<input type="radio" id="monthly" name="horoscope" value="monthly">
+<input type="radio" name="h" id="monthly" value="monthly">
 <label for="monthly">Monthly</label>
+</div>
 
-<br><br>
-
-<p>Topics you are interested in:</p>
-
+<div class="form-options">
+<b>Topics:</b><br>
 <input type="checkbox" id="love" name="topic" value="love">
 <label for="love">Love</label>
-
 <input type="checkbox" id="career" name="topic" value="career">
 <label for="career">Career</label>
-
 <input type="checkbox" id="finance" name="topic" value="finance">
 <label for="finance">Finance</label>
-
 <input type="checkbox" id="wellness" name="topic" value="wellness">
 <label for="wellness">Wellness</label>
+</div>
 
-<br><br>
+<div class="form-row">
+<label for="website">Website:</label>
+<input type="url" id="website" placeholder="https://example.com">
+</div>
 
-<label for="lucky">Lucky Number:</label>
-<input type="number" id="lucky" name="lucky" min="1" max="99">
+<div class="form-row">
+<label for="search">Search:</label>
+<input type="search" id="search" placeholder="Search zodiac sign">
+</div>
 
-<br><br>
+<div class="form-row">
+<label for="photo">Birth Chart:</label>
+<input type="file" id="photo">
+</div>
 
-<label for="interest">Astrology Interest Level:</label>
-<input type="range" id="interest" name="interest" min="0" max="100" value="75">
-
-<br><br>
-
-<label for="website">Your Website:</label>
-<input type="url" id="website" name="website" placeholder="https://example.com">
-
-<br><br>
-
-<label for="search">Search Horoscope:</label>
-<input type="search" id="search" name="search" placeholder="Search zodiac sign">
-
-<br><br>
-
-<label for="photo">Upload Birth Chart:</label>
-<input type="file" id="photo" name="photo">
-
-<br><br>
-
-<label for="message">Your Question for the Astrologer:</label>
-<br>
-
-<textarea id="message" name="message" rows="5" cols="60"
-placeholder="Write your astrology question here..."></textarea>
-
+<div class="form-row">
+<label for="message">Your Question:</label>
+<textarea id="message" rows="5" placeholder="Write your astrology question here..."></textarea>
+</div>
 </fieldset>
 
-<br>
-
 <fieldset>
-<legend><b>Prediction Request</b></legend>
+<legend>🌟 Prediction Request</legend>
 
-<label for="prediction">Prediction Completion:</label>
-
+<div class="form-row">
+<label for="prediction">Completion:</label>
 <progress id="prediction" value="80" max="100">80%</progress>
+</div>
 
-<p>Current database coverage: 80%</p>
+<p align="center">Current astrology database coverage: <b>80%</b></p>
 
 <input type="hidden" name="source" value="StarVerse">
 
-<input type="submit" value="Get Horoscope">
-<input type="reset" value="Clear Form">
-
-<input type="button" value="Astrology Info"
+<div class="form-actions">
+<input type="submit" value="🔮 Get Horoscope">
+<input type="reset" value="↻ Clear Form">
+<input type="button" value="✨ Astrology Info"
 onclick="alert('Welcome to StarVerse Astrology!')">
-
+</div>
 </fieldset>
 
 </form>
 </div>
-
 <hr>
 
-<!-- USEFUL LINK -->
-<div align="center">
-<h2>🔗 Useful Astrology Link</h2>
-<p>
-Learn more about astrology at
-<a href="https://en.wikipedia.org/wiki/Astrology" target="_blank">
-Wikipedia - Astrology
-</a>
-</p>
-</div>
-
-<hr>
-
-<!-- FOOTER -->
 <div align="center">
 <h2>✨ StarVerse ✨</h2>
 <p>Astrology & Horoscope Website</p>
 <p>Created using HTML5 elements.</p>
 <p>&copy; 2026 StarVerse</p>
 </div>
-
 </body>
 </html>
