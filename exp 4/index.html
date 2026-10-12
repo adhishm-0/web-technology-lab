@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarVerse - Sign In & Sign Up</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>✨ STARVERSE ✨</h1>
+        <h2>Astrology & Horoscope</h2>
+        <p>
+            Explore the zodiac, discover your horoscope,
+            and connect with the stars.
+        </p>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#signin">Sign In</a>
+            <a href="#signup">Sign Up</a>
+            <a href="#zodiac">Zodiac Signs</a>
+            <a href="#horoscope">Horoscope</a>
+        </nav>
+    </div>
+
+    <hr>
+
+    <!-- Authentication Section -->
+    <section id="home" class="auth-section">
+
+        <div class="auth-title">
+            <h2>🌌 Welcome to StarVerse</h2>
+            <p>
+                Sign in to explore your horoscope or create a new
+                cosmic profile to begin your astrology journey.
+            </p>
+        </div>
+
+        <div class="forms-container">
+
+            <!-- Sign In -->
+            <div id="signin" class="form-box">
+
+                <h3>🔮 Sign In</h3>
+
+                <p>
+                    Welcome back, stargazer!
+                    Enter your details to continue.
+                </p>
+
+                <form action="#" method="get">
+
+                    <fieldset>
+                        <legend>🌟 Account Login</legend>
+
+                        <div class="form-row">
+                            <label for="signin-email">Email:</label>
+                            <input type="email"
+                                   id="signin-email"
+                                   name="email"
+                                   placeholder="Enter your email"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="signin-password">Password:</label>
+                            <input type="password"
+                                   id="signin-password"
+                                   name="password"
+                                   placeholder="Enter your password"
+                                   required>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" value="✨ Sign In">
+                        </div>
+                    </fieldset>
+
+                </form>
+
+                <p class="small-note">
+                    New to StarVerse? Create your cosmic profile below.
+                </p>
+
+            </div>
+
+
+            <!-- Sign Up -->
+            <div id="signup" class="form-box">
+
+                <h3>🌙 Sign Up</h3>
+
+                <p>
+                    Create your StarVerse account and explore
+                    astrology and horoscope content.
+                </p>
+
+                <form action="#" method="get">
+
+                    <fieldset>
+                        <legend>👤 Create Account</legend>
+
+                        <div class="form-row">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text"
+                                   id="fullname"
+                                   name="fullname"
+                                   placeholder="Enter your name"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="signup-email">Email:</label>
+                            <input type="email"
+                                   id="signup-email"
+                                   name="email"
+                                   placeholder="example@email.com"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="signup-password">Password:</label>
+                            <input type="password"
+                                   id="signup-password"
+                                   name="password"
+                                   placeholder="Create a password"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date"
+                                   id="dob"
+                                   name="dob"
+                                   required>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" value="🌟 Sign Up">
+                            <input type="reset" value="↻ Clear Form">
+                        </div>
+
+                    </fieldset>
+
+                </form>
+
+                <p class="small-note">
+                    Your journey through the zodiac begins here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- Zodiac Reference -->
+    <section id="zodiac" class="auth-section">
+        <div class="auth-title">
+            <h2>♈ The 12 Zodiac Signs</h2>
+            <p>Discover the twelve signs of the zodiac.</p>
+        </div>
+
+        <div class="form-box" style="width: 100%; max-width: 1000px; margin: auto;">
+            <table style="width:100%; border-collapse:collapse; background-color:rgba(18,8,43,.95);">
+                <tr>
+                    <th style="padding:12px; background-color:#6333a8;">Sign</th>
+                    <th style="padding:12px; background-color:#6333a8;">Symbol</th>
+                    <th style="padding:12px; background-color:#6333a8;">Element</th>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Aries</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♈</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Fire 🔥</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Taurus</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♉</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Earth 🌍</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Gemini</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♊</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Air 💨</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Cancer</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♋</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Water 💧</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Leo</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♌</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Fire 🔥</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Virgo</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♍</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Earth 🌍</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Libra</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♎</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Air 💨</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Scorpio</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♏</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Water 💧</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Sagittarius</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♐</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Fire 🔥</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Capricorn</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♑</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Earth 🌍</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Aquarius</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♒</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Air 💨</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Pisces</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790; font-size:30px;">♓</td>
+                    <td style="padding:10px; text-align:center; border:1px solid #6e5790;">Water 💧</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Horoscope -->
+    <section id="horoscope" class="auth-section">
+        <div class="auth-title">
+            <h2>🔮 Horoscope</h2>
+            <p>Explore simple horoscope messages for the zodiac signs.</p>
+        </div>
+
+        <div class="form-box" style="width:100%; max-width:900px; margin:auto;">
+            <ul>
+                <li>♈ Aries: Your confidence is strong today.</li>
+                <li>♉ Taurus: Patience brings better results.</li>
+                <li>♊ Gemini: Communication is your strength.</li>
+                <li>♋ Cancer: Listen to your intuition.</li>
+                <li>♌ Leo: Let your creativity shine.</li>
+                <li>♍ Virgo: Organize your priorities.</li>
+                <li>♎ Libra: Choose balance and harmony.</li>
+                <li>♏ Scorpio: Stay focused on your goals.</li>
+                <li>♐ Sagittarius: Explore a new direction.</li>
+                <li>♑ Capricorn: Consistency brings progress.</li>
+                <li>♒ Aquarius: Creative thinking helps today.</li>
+                <li>♓ Pisces: Let your imagination guide you.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>✨ StarVerse ✨</h2>
+        <p>Astrology & Horoscope Website</p>
+        <p>Experiment 04 - Sign In & Sign Up Page</p>
+        <p>&copy; 2026 StarVerse · Astrology & Horoscope</p>
+    </footer>
+
+</body>
+</html>

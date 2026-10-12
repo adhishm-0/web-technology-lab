@@ -1,0 +1,294 @@
+/* =========================
+   EXPERIMENT 4 - CSS3
+   StarVerse Astrology & Horoscope
+   Sign In & Sign Up Page
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #f5efff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    background-color: #09051d;
+    background-image:
+        radial-gradient(circle at 15% 15%, rgba(157, 78, 221, .28), transparent 25%),
+        radial-gradient(circle at 85% 10%, rgba(72, 149, 239, .20), transparent 25%),
+        linear-gradient(135deg, #09051d, #21104b 50%, #061b38);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    padding: 35px 20px 20px;
+    text-align: center;
+    background-color: rgba(10, 5, 35, .92);
+    border-bottom: 2px solid #b88cff;
+}
+
+.header h1 {
+    margin: 0 0 4px;
+    font-size: 44px;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px 8px #000;
+}
+
+.header h2 {
+    margin: 0;
+    color: #e2c4ff;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    margin: 8px auto 15px;
+    max-width: 700px;
+    color: #d9cbea;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a:link,
+nav a:visited {
+    display: inline-block;
+    margin: 4px;
+    padding: 7px 14px;
+    color: #ffe7a3;
+    background-color: transparent;
+    border: 1px solid #8f6bc1;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #7c3aed;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #fff;
+    background-color: #db2777;
+}
+
+/* Main authentication area */
+.auth-section {
+    width: 94%;
+    max-width: 1100px;
+    min-height: 580px;
+    margin: 30px auto;
+    padding: 55px 30px;
+
+    background-image:
+        linear-gradient(rgba(9, 5, 29, .55), rgba(9, 5, 29, .70)),
+        url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80");
+
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #8f6bc1;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .45);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-title h2 {
+    margin: 0;
+    color: #ead7ff;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.auth-title p {
+    color: #d9cbea;
+}
+
+.forms-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 35px;
+}
+
+/* Authentication boxes */
+.form-box {
+    width: 360px;
+    padding: 28px;
+    background-color: rgba(14, 7, 35, .96);
+    border: 1px solid #9270c5;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .45);
+}
+
+.form-box h3 {
+    margin-top: 0;
+    color: #f2dcff;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.form-box p {
+    text-align: center;
+    color: #d9cbea;
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #9270c5;
+    border-radius: 12px;
+    background-color: rgba(35, 18, 70, .45);
+}
+
+legend {
+    padding: 5px 12px;
+    color: #f2dcff;
+    background-color: #3b1b67;
+    border: 1px solid #9270c5;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.form-row {
+    margin: 15px 0;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 6px;
+    color: #eadcf7;
+    font-weight: bold;
+}
+
+.form-row input {
+    width: 100%;
+    padding: 11px 13px;
+    color: #17101f;
+    background-color: #faf7ff;
+    border: 2px solid #8966b8;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.form-row input:focus {
+    outline: none;
+    border-color: #d8b4fe;
+    box-shadow: 0 0 8px rgba(216, 180, 254, .65);
+}
+
+/* Buttons */
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-actions input {
+    width: 100%;
+    margin: 6px 0;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form-actions input[type="submit"] {
+    color: #16051f;
+    background-color: #d8b4fe;
+}
+
+.form-actions input[type="reset"] {
+    color: #20132b;
+    background-color: #ddd6fe;
+}
+
+.form-actions input:hover {
+    text-decoration: underline;
+    box-shadow: 3px 3px 8px #000;
+}
+
+.small-note {
+    text-align: center;
+    color: #cdbce2;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    margin-top: 35px;
+    padding: 30px 20px;
+    text-align: center;
+    background-color: rgba(6, 3, 18, .85);
+    border-top: 1px solid #8060a8;
+}
+
+footer h2 {
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+footer p {
+    margin: 5px;
+    color: #d9cbea;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 34px;
+        letter-spacing: 3px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .auth-section {
+        width: 94%;
+        padding: 30px 18px;
+    }
+
+    .forms-container {
+        display: block;
+    }
+
+    .form-box {
+        width: 100%;
+        max-width: 380px;
+        margin: 20px auto;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
+}
