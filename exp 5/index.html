@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 5 - JavaScript DOM and Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM and Events</h1>
+        <p>Experiment 5</p>
+    </header>
+
+    <nav>
+        <a href="#dom">DOM</a>
+        <a href="#words">Words</a>
+        <a href="#bmi">BMI</a>
+        <a href="#garden-section">Fruit Garden</a>
+        <a href="#currency">Currency</a>
+        <a href="#coin-section">Coin Flip</a>
+        <a href="#cake">Cake Order</a>
+    </nav>
+
+    <main>
+        <section id="dom">
+            <h2>1. DOM Elements and Events</h2>
+            <p id="dom-message">This text can be changed with JavaScript.</p>
+            <button type="button" id="change-message">Change Text</button>
+            <p><button type="button" id="click-card">Click count: <span id="click-count">0</span></button></p>
+            <label for="key-input">Type something:</label>
+            <input id="key-input" type="text" placeholder="Type here">
+            <p>Last key pressed: <strong id="key-output">-</strong></p>
+            <p id="event-notice">Page loaded.</p>
+        </section>
+
+        <section id="words">
+            <h2>2. Shortest and Longest Word</h2>
+            <form id="word-form">
+                <label for="sentence">Enter a sentence:</label>
+                <input id="sentence" type="text" value="Web Development Tutorial" required>
+                <button type="submit">Find Words</button>
+            </form>
+            <p>Shortest word: <strong id="shortest">Web</strong></p>
+            <p>Longest word: <strong id="longest">Development</strong></p>
+        </section>
+
+        <section id="bmi">
+            <h2>3. BMI Calculator</h2>
+            <form id="bmi-form">
+                <label for="weight">Weight (kg):</label>
+                <input id="weight" type="number" min="1" step="any" required>
+                <label for="height">Height (m):</label>
+                <input id="height" type="number" min="0.1" step="any" required>
+                <button type="submit">Calculate BMI</button>
+            </form>
+            <p>BMI: <strong id="score">-</strong></p>
+            <p>Body type: <strong id="type">-</strong></p>
+            <p class="note">Underweight: less than 18 | Normal: 18–25 | Overweight: 25–30 | Obese: above 30</p>
+        </section>
+
+        <section id="garden-section">
+            <h2>4. Fruit Garden</h2>
+            <form id="garden-form">
+                <label for="rows">Rows:</label>
+                <input id="rows" type="number" min="1" max="8" value="3" required>
+                <label for="columns">Columns:</label>
+                <input id="columns" type="number" min="1" max="8" value="4" required>
+                <button type="submit">Plant Garden</button>
+            </form>
+            <div id="garden" aria-live="polite"></div>
+        </section>
+
+        <section id="currency">
+            <h2>5. Currency Converter</h2>
+            <form id="currency-form">
+                <label for="amount">Amount:</label>
+                <input id="amount" type="number" min="0" step="any" value="100" required>
+                <label for="from">From:</label>
+                <select id="from"><option value="INR">Indian Rupee</option><option value="USD">US Dollar</option></select>
+                <label for="to">To:</label>
+                <select id="to"><option value="USD">US Dollar</option><option value="INR">Indian Rupee</option></select>
+                <button type="submit">Convert</button>
+            </form>
+            <p>Converted amount: <strong id="answer">$1.50</strong></p>
+        </section>
+
+        <section id="coin-section">
+            <h2>6. Coin Flip</h2>
+            <img id="coin-image" src="heads.svg" alt="Coin showing heads">
+            <p><button type="button" id="flip">Flip!</button></p>
+            <p>Heads: <span id="num_heads">0</span></p>
+            <p>Tails: <span id="num_tails">0</span></p>
+        </section>
+
+        <section id="cake">
+            <h2>7. Birthday Cake Order</h2>
+            <form id="cake-form">
+                <label for="half-cakes">Number of ½ kg cakes (₹100 each):</label>
+                <input id="half-cakes" type="number" min="0" value="0" required>
+                <label for="one-cake">Number of 1 kg cakes (₹200 each):</label>
+                <input id="one-cake" type="number" min="0" value="1" required>
+                <label for="two-cakes">Number of 2 kg cakes (₹400 each):</label>
+                <input id="two-cakes" type="number" min="0" value="0" required>
+                <fieldset>
+                    <legend>Tip:</legend>
+                    <label><input type="radio" name="tip" value="10"> 10%</label>
+                    <label><input type="radio" name="tip" value="15" checked> 15%</label>
+                    <label><input type="radio" name="tip" value="20"> 20%</label>
+                </fieldset>
+                <button type="submit">Calculate Order</button>
+            </form>
+            <p>Cost of order: <strong id="price">-</strong></p>
+        </section>
+    </main>
+
+    <footer><p>Experiment 5 - Web Technology Lab</p></footer>
+</body>
+</html>

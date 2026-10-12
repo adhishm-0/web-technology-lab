@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-label="Coin showing tails">
+  <defs><linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5e8ff"/><stop offset=".5" stop-color="#b99ae5"/><stop offset="1" stop-color="#62458b"/></linearGradient></defs>
+  <circle cx="70" cy="70" r="65" fill="#382456"/><circle cx="70" cy="70" r="59" fill="url(#silver)" stroke="#f1ddff" stroke-width="3"/><circle cx="70" cy="70" r="48" fill="none" stroke="#67498d" stroke-width="2"/>
+  <text x="70" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="42" font-weight="bold" fill="#483064">T</text><text x="70" y="34" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" letter-spacing="3" fill="#483064">STARVERSE</text>
+</svg>

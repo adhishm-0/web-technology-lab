@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-label="Coin showing heads">
+  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a8"/><stop offset=".5" stop-color="#e9ac3b"/><stop offset="1" stop-color="#9b5c15"/></linearGradient></defs>
+  <circle cx="70" cy="70" r="65" fill="#6f4218"/><circle cx="70" cy="70" r="59" fill="url(#gold)" stroke="#ffe9a0" stroke-width="3"/><circle cx="70" cy="70" r="48" fill="none" stroke="#a76d22" stroke-width="2"/>
+  <text x="70" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="42" font-weight="bold" fill="#764513">H</text><text x="70" y="34" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" letter-spacing="3" fill="#764513">STARVERSE</text>
+</svg>

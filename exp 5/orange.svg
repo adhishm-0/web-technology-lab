@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Orange fruit">
+  <path fill="#568b42" d="M60 30c-2-11 2-18 12-22 1 10-3 17-12 22Z"/><path fill="#69a94d" d="M60 28c-9-9-18-9-25-4 7 7 15 9 25 4Z"/>
+  <circle cx="60" cy="68" r="43" fill="#f38b22"/><circle cx="60" cy="68" r="36" fill="#ffa52e"/>
+  <path fill="#ffd270" d="M38 48c6-8 16-12 25-11-13 5-18 14-20 25-2 10 3 23 9 31-16-6-25-27-14-45Z"/>
+  <path fill="#fff" d="M42 48c4-5 10-8 16-8-7 3-11 7-14 13-2 2-4-2-2-5Z" opacity=".65"/>
+</svg>
