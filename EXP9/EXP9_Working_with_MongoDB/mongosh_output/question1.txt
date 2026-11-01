@@ -1,0 +1,138 @@
+test> 
+test> switched to db CollegeDB
+CollegeDB> { ok: 1 }
+CollegeDB> 
+CollegeDB> {
+  acknowledged: true,
+  insertedId: ObjectId('6ae6c328b50299de14f0eead')
+}
+CollegeDB> | | | | | {
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6ae6c328b50299de14f0eeae'),
+    '1': ObjectId('6ae6c328b50299de14f0eeaf'),
+    '2': ObjectId('6ae6c328b50299de14f0eeb0'),
+    '3': ObjectId('6ae6c328b50299de14f0eeb1')
+  }
+}
+CollegeDB> All student records:
+[
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  },
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 103,
+    name: 'Kumar',
+    department: 'CSE',
+    age: 19,
+    mark: 78
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  },
+  {
+    rollNo: 105,
+    name: 'Ravi',
+    department: 'CSE',
+    age: 22,
+    mark: 67
+  }
+]
+
+CollegeDB> Student with roll number 103:
+{
+  rollNo: 103,
+  name: 'Kumar',
+  department: 'CSE',
+  age: 19,
+  mark: 78
+}
+
+CollegeDB> Students scoring above 80:
+[
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  },
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  }
+]
+
+CollegeDB> Update Arun's marks:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+CollegeDB> Delete Ravi by roll number:
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+CollegeDB> Remaining students:
+[
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 90
+  },
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 103,
+    name: 'Kumar',
+    department: 'CSE',
+    age: 19,
+    mark: 78
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  }
+]
+
+CollegeDB> 

@@ -6,7 +6,7 @@ Files
 - Q3_Product_Database.js: create/use ProductDB and manage products.
 - Q4_Library_Database.js: create/use LibraryDB and query books.
 - Q5_Student_Query_Operations.js: student comparison, membership, sorting, limiting, and updateMany queries.
-- output_screenshots/: representative terminal output panels for each question.
+- output_screenshots/: actual mongosh output captures for each question.
 
 Run a program
 1. Install MongoDB Community Server and MongoDB Shell (mongosh), then start the server.
@@ -16,4 +16,4 @@ Run a program
 
 Q1–Q4 insert their sample records, so run them against fresh lab databases or clear the corresponding collection before rerunning. Q5 inserts its seed records only when the students collection does not exist.
 
-The output panels are representative examples based on the included sample records. MongoDB Shell and a MongoDB server were not installed in the document-generation environment; the JavaScript files contain the runnable commands.
+The screenshot panels were captured from actual mongosh output produced by running the included programs against a temporary local MongoDB 8.0 server. Full stdout from each run is saved in mongosh_output/.

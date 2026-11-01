@@ -1,0 +1,51 @@
+LibraryDB> Update Dune price to Rs. 680:
+
+LibraryDB> {
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+LibraryDB> Books alphabetically by title:
+
+LibraryDB> [
+  {
+    bookId: 401,
+    title: 'Algorithms',
+    author: 'Cormen',
+    category: 'Computing',
+    price: 950
+  },
+  {
+    bookId: 402,
+    title: 'Clean Code',
+    author: 'Robert Martin',
+    category: 'Computing',
+    price: 780
+  },
+  {
+    bookId: 403,
+    title: 'Dune',
+    author: 'Frank Herbert',
+    category: 'Fiction',
+    price: 680
+  },
+  {
+    bookId: 404,
+    title: 'Pride and Prejudice',
+    author: 'Jane Austen',
+    category: 'Classic',
+    price: 500
+  },
+  {
+    bookId: 405,
+    title: 'The Hobbit',
+    author: 'J. R. R. Tolkien',
+    category: 'Fantasy',
+    price: 700
+  }
+]
+
+LibraryDB> Total books: 5

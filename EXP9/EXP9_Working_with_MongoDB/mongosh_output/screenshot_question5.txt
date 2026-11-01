@@ -1,0 +1,42 @@
+CollegeDB> Top three students by marks:
+
+CollegeDB> [
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  },
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  }
+]
+
+CollegeDB> Add 5 marks to all CSE students:
+
+CollegeDB> {
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+
+CollegeDB> [
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,

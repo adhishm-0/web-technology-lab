@@ -1,0 +1,45 @@
+ProductDB> Delete out-of-stock products:
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+ProductDB> Five most expensive products:
+
+ProductDB> [
+  {
+    productId: 304,
+    name: 'Monitor',
+    category: 'Display',
+    price: 12500,
+    stock: 8
+  },
+  {
+    productId: 306,
+    name: 'Speaker',
+    category: 'Audio',
+    price: 2300,
+    stock: 14
+  },
+  {
+    productId: 305,
+    name: 'Webcam',
+    category: 'Accessories',
+    price: 1950,
+    stock: 5
+  },
+  {
+    productId: 303,
+    name: 'Headphones',
+    category: 'Audio',
+    price: 1800,
+    stock: 12
+  },
+  {
+    productId: 301,
+    name: 'Keyboard',
+    category: 'Accessories',
+    price: 850,
+    stock: 34
+  }
+]

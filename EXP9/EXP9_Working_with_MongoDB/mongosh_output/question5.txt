@@ -1,0 +1,180 @@
+test> 
+test> switched to db CollegeDB
+CollegeDB> | | | | | | | | | {
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6ae6c32a48f3d46de5ae01f5'),
+    '1': ObjectId('6ae6c32a48f3d46de5ae01f6'),
+    '2': ObjectId('6ae6c32a48f3d46de5ae01f7'),
+    '3': ObjectId('6ae6c32a48f3d46de5ae01f8'),
+    '4': ObjectId('6ae6c32a48f3d46de5ae01f9')
+  }
+}
+CollegeDB> 
+CollegeDB> Students with marks >= 75:
+
+CollegeDB> [
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  },
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 103,
+    name: 'Kumar',
+    department: 'CSE',
+    age: 19,
+    mark: 78
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  }
+]
+
+CollegeDB> Students younger than 21:
+
+CollegeDB> [
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  },
+  {
+    rollNo: 103,
+    name: 'Kumar',
+    department: 'CSE',
+    age: 19,
+    mark: 78
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  }
+]
+
+CollegeDB> Students in CSE or IT:
+
+CollegeDB> [
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  },
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 103,
+    name: 'Kumar',
+    department: 'CSE',
+    age: 19,
+    mark: 78
+  },
+  {
+    rollNo: 105,
+    name: 'Ravi',
+    department: 'CSE',
+    age: 22,
+    mark: 67
+  }
+]
+
+CollegeDB> Top three students by marks:
+
+CollegeDB> [
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  },
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 85
+  }
+]
+
+CollegeDB> Add 5 marks to all CSE students:
+
+CollegeDB> {
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+
+CollegeDB> [
+  {
+    rollNo: 101,
+    name: 'Arun',
+    department: 'CSE',
+    age: 20,
+    mark: 90
+  },
+  {
+    rollNo: 102,
+    name: 'Priya',
+    department: 'IT',
+    age: 21,
+    mark: 92
+  },
+  {
+    rollNo: 103,
+    name: 'Kumar',
+    department: 'CSE',
+    age: 19,
+    mark: 83
+  },
+  {
+    rollNo: 104,
+    name: 'Divya',
+    department: 'ECE',
+    age: 20,
+    mark: 88
+  },
+  {
+    rollNo: 105,
+    name: 'Ravi',
+    department: 'CSE',
+    age: 22,
+    mark: 72
+  }
+]
+
+CollegeDB> 
