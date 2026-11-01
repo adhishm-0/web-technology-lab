@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experiment 7 — Working with jQuery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">WEB TECHNOLOGY LAB · EXPERIMENT 7</p>
+    <h1>Working with jQuery</h1>
+    <p>Interactive budget planning, cake ordering, and car customization.</p>
+  </header>
+  <main>
+    <section class="panel" id="q1">
+      <div class="panel-heading"><div><p class="eyebrow">QUESTION 1</p><h2>Budget Calculator</h2></div><span class="pill">Plan your monthly budget</span></div>
+      <div class="budget-layout">
+        <form id="budgetForm" class="form-grid">
+          <label class="wide">Monthly amount (₹)<input id="budgetAmount" type="number" min="1" step="0.01" placeholder="e.g. 25000" required></label>
+          <label>Room rent (%)<input id="rentPercent" type="number" min="0" max="100" step="1" value="30"></label>
+          <label>Accessories (%)<input id="accessoriesPercent" type="number" min="0" max="100" step="1" value="25"></label>
+          <label>Emergency (%)<input id="emergencyPercent" type="number" min="0" max="100" step="1" value="15"></label>
+          <label>Savings (%)<input id="savingPercent" type="number" min="0" max="100" step="1" value="30"></label>
+          <button class="primary wide" type="submit" id="evaluateBudget">Evaluate My Money</button>
+        </form>
+        <div class="results" aria-live="polite">
+          <h3>Your allocation</h3>
+          <div class="result-row"><span>Room rent</span><strong id="rentValue">₹0.00</strong></div>
+          <div class="result-row"><span>Accessories</span><strong id="accessoriesValue">₹0.00</strong></div>
+          <div class="result-row"><span>Emergency fund</span><strong id="emergencyValue">₹0.00</strong></div>
+          <div class="result-row"><span>Savings</span><strong id="savingValue">₹0.00</strong></div>
+          <p class="sum-note" id="budgetNote">Percentages must total 100%.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="q2">
+      <div class="panel-heading"><div><p class="eyebrow">QUESTION 2</p><h2>Cake Order Calculator</h2></div><span class="pill">Choose quantities and tip</span></div>
+      <div class="cake-layout">
+        <div class="cake-menu">
+          <div class="cake-item"><div><strong>Small cake</strong><span>₹100 each</span></div><input id="smallQty" type="number" min="0" value="1" aria-label="Small cakes"></div>
+          <div class="cake-item"><div><strong>Medium cake</strong><span>₹200 each</span></div><input id="mediumQty" type="number" min="0" value="2" aria-label="Medium cakes"></div>
+          <div class="cake-item"><div><strong>Large cake</strong><span>₹400 each</span></div><input id="largeQty" type="number" min="0" value="1" aria-label="Large cakes"></div>
+          <label class="tip-label">Tip for the bakery
+            <select id="tipPercent"><option value="0">No tip</option><option value="5">5%</option><option value="10" selected>10%</option><option value="15">15%</option></select>
+          </label>
+          <button id="calculateCake" class="primary" type="button">Calculate order</button>
+        </div>
+        <div class="receipt" aria-live="polite">
+          <p class="eyebrow">ORDER SUMMARY</p>
+          <div class="result-row"><span>Subtotal</span><strong id="cakeSubtotal">₹900.00</strong></div>
+          <div class="result-row"><span>Tax (9%)</span><strong id="cakeTax">₹81.00</strong></div>
+          <div class="result-row"><span>Tip</span><strong id="cakeTip">₹98.10</strong></div>
+          <div class="result-row total"><span>Total</span><strong id="cakeTotal">₹1,079.10</strong></div>
+          <p id="cakeMessage" class="sum-note">Your order is ready to review.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="q3">
+      <div class="panel-heading"><div><p class="eyebrow">QUESTION 3</p><h2>Car Body Workshop</h2></div><span class="pill">Customize your car</span></div>
+      <div class="workshop-layout">
+        <div class="car-stage">
+          <div class="stage-label"><span>LIVE PREVIEW</span><span id="paintName">Ocean blue</span></div>
+          <svg id="carPreview" viewBox="0 0 640 300" role="img" aria-label="Customizable car preview">
+            <ellipse cx="320" cy="247" rx="245" ry="18" fill="#d7e0e7"/>
+            <path id="carBody" d="M92 205 L113 158 Q128 137 185 126 L251 76 Q271 62 316 62 L411 64 Q445 66 474 105 L516 132 Q549 144 565 172 L576 205 Q582 222 562 229 L82 229 Q66 225 72 211Z" fill="#187da1" stroke="#163d50" stroke-width="8" stroke-linejoin="round"/>
+            <path d="M190 128 L260 82 Q273 74 305 74 L305 128Z" fill="#bfe8f4" stroke="#163d50" stroke-width="6"/>
+            <path d="M319 74 L407 76 Q428 77 451 106 L470 128 L319 128Z" fill="#bfe8f4" stroke="#163d50" stroke-width="6"/>
+            <path d="M319 77 L319 128" stroke="#163d50" stroke-width="6"/>
+            <rect x="115" y="167" width="52" height="18" rx="8" fill="#fff1b8"/><rect x="519" y="171" width="35" height="15" rx="6" fill="#ff7b78"/>
+            <path d="M235 151 L235 211 M411 151 L411 211" stroke="#12546f" stroke-width="5" opacity=".65"/>
+            <g class="wheel"><circle cx="181" cy="222" r="42" fill="#26343b"/><circle cx="181" cy="222" r="23" fill="#aab9c0"/><circle cx="181" cy="222" r="8" fill="#eff4f6"/></g>
+            <g class="wheel"><circle cx="466" cy="222" r="42" fill="#26343b"/><circle cx="466" cy="222" r="23" fill="#aab9c0"/><circle cx="466" cy="222" r="8" fill="#eff4f6"/></g>
+            <path id="spoiler" d="M90 151 L76 130 L115 132 L125 149Z" fill="#163d50" style="display:none"/>
+          </svg>
+          <div class="tint-overlay" id="tintOverlay"></div>
+        </div>
+        <div class="controls">
+          <h3>Workshop controls</h3>
+          <p class="control-title">Body paint</p>
+          <div class="swatches">
+            <button type="button" class="swatch active" data-color="#187da1" data-name="Ocean blue" style="--swatch:#187da1" aria-label="Ocean blue"></button>
+            <button type="button" class="swatch" data-color="#c94b4b" data-name="Racing red" style="--swatch:#c94b4b" aria-label="Racing red"></button>
+            <button type="button" class="swatch" data-color="#36855f" data-name="Forest green" style="--swatch:#36855f" aria-label="Forest green"></button>
+            <button type="button" class="swatch" data-color="#e3ad35" data-name="Sunset gold" style="--swatch:#e3ad35" aria-label="Sunset gold"></button>
+          </div>
+          <label>Wheel finish<select id="wheelFinish"><option value="#aab9c0">Silver alloy</option><option value="#d2a745">Gold alloy</option><option value="#3a4248">Graphite</option></select></label>
+          <label>Window tint <span id="tintValue">20%</span><input id="windowTint" type="range" min="0" max="80" value="20"></label>
+          <label class="toggle"><input id="spoilerToggle" type="checkbox"> Add rear spoiler</label>
+          <p id="workshopMessage" class="sum-note">Ocean blue paint selected.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Web Technology Lab · Experiment 7</footer>
+</body>
+</html>
