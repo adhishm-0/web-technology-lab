@@ -4,15 +4,15 @@ CollegeDB> { ok: 1 }
 CollegeDB> 
 CollegeDB> {
   acknowledged: true,
-  insertedId: ObjectId('6ae6c328b50299de14f0eead')
+  insertedId: ObjectId('6ae6c5579bfaec8e82594a08')
 }
 CollegeDB> | | | | | {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('6ae6c328b50299de14f0eeae'),
-    '1': ObjectId('6ae6c328b50299de14f0eeaf'),
-    '2': ObjectId('6ae6c328b50299de14f0eeb0'),
-    '3': ObjectId('6ae6c328b50299de14f0eeb1')
+    '0': ObjectId('6ae6c5579bfaec8e82594a09'),
+    '1': ObjectId('6ae6c5579bfaec8e82594a0a'),
+    '2': ObjectId('6ae6c5579bfaec8e82594a0b'),
+    '3': ObjectId('6ae6c5579bfaec8e82594a0c')
   }
 }
 CollegeDB> All student records:

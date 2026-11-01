@@ -1,48 +1,19 @@
-CollegeDB> Student with roll number 103:
-{
-  rollNo: 103,
-  name: 'Kumar',
-  department: 'CSE',
-  age: 19,
-  mark: 78
-}
+test> 
+test> CollegeDB> db.students.find({}, {_id:0, name:1, rollNo:1, mark:1})
 
-CollegeDB> Students scoring above 80:
-[
-  {
-    rollNo: 101,
-    name: 'Arun',
-    department: 'CSE',
-    age: 20,
-    mark: 85
-  },
-  {
-    rollNo: 102,
-    name: 'Priya',
-    department: 'IT',
-    age: 21,
-    mark: 92
-  },
-  {
-    rollNo: 104,
-    name: 'Divya',
-    department: 'ECE',
-    age: 20,
-    mark: 88
-  }
+test> [
+  '101  Arun  90',
+  '102  Priya  92',
+  '103  Kumar  78',
+  '104  Divya  88'
 ]
 
-CollegeDB> Update Arun's marks:
-{
-  acknowledged: true,
-  insertedId: null,
-  matchedCount: 1,
-  modifiedCount: 1,
-  upsertedCount: 0
-}
+test> CollegeDB> db.students.find({mark: {$gt: 80}}, {_id:0, name:1, mark:1})
 
-CollegeDB> Delete Ravi by roll number:
-{
-  acknowledged: true,
-  deletedCount: 1
-}
+test> [
+  'Arun  90',
+  'Priya  92',
+  'Divya  88'
+]
+
+test> 

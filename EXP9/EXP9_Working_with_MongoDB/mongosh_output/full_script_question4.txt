@@ -5,11 +5,11 @@ LibraryDB>
 LibraryDB> | | | | | | {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('6ae6c3298e6cf1b5d062be55'),
-    '1': ObjectId('6ae6c3298e6cf1b5d062be56'),
-    '2': ObjectId('6ae6c3298e6cf1b5d062be57'),
-    '3': ObjectId('6ae6c3298e6cf1b5d062be58'),
-    '4': ObjectId('6ae6c3298e6cf1b5d062be59')
+    '0': ObjectId('6ae6c5b0820be9d09ea4dacf'),
+    '1': ObjectId('6ae6c5b0820be9d09ea4dad0'),
+    '2': ObjectId('6ae6c5b0820be9d09ea4dad1'),
+    '3': ObjectId('6ae6c5b0820be9d09ea4dad2'),
+    '4': ObjectId('6ae6c5b0820be9d09ea4dad3')
   }
 }
 LibraryDB> Books by Cormen:

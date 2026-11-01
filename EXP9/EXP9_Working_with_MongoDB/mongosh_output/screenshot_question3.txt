@@ -1,45 +1,20 @@
-ProductDB> Delete out-of-stock products:
-{
-  acknowledged: true,
-  deletedCount: 1
-}
+test> 
+test> ProductDB> db.products.find({price: {$gte:500, $lte:2000}})
 
-ProductDB> Five most expensive products:
-
-ProductDB> [
-  {
-    productId: 304,
-    name: 'Monitor',
-    category: 'Display',
-    price: 12500,
-    stock: 8
-  },
-  {
-    productId: 306,
-    name: 'Speaker',
-    category: 'Audio',
-    price: 2300,
-    stock: 14
-  },
-  {
-    productId: 305,
-    name: 'Webcam',
-    category: 'Accessories',
-    price: 1950,
-    stock: 5
-  },
-  {
-    productId: 303,
-    name: 'Headphones',
-    category: 'Audio',
-    price: 1800,
-    stock: 12
-  },
-  {
-    productId: 301,
-    name: 'Keyboard',
-    category: 'Accessories',
-    price: 850,
-    stock: 34
-  }
+test> [
+  'Keyboard  Rs.850',
+  'Headphones  Rs.1800',
+  'Webcam  Rs.1950'
 ]
+
+test> ProductDB> db.products.find().sort({price:-1}).limit(5)
+
+test> [
+  'Monitor  Rs.12500',
+  'Speaker  Rs.2300',
+  'Webcam  Rs.1950',
+  'Headphones  Rs.1800',
+  'Keyboard  Rs.850'
+]
+
+test> 

@@ -5,12 +5,12 @@ ProductDB>
 ProductDB> | | | | | | | {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('6ae6c3291f935b62af63635e'),
-    '1': ObjectId('6ae6c3291f935b62af63635f'),
-    '2': ObjectId('6ae6c3291f935b62af636360'),
-    '3': ObjectId('6ae6c3291f935b62af636361'),
-    '4': ObjectId('6ae6c3291f935b62af636362'),
-    '5': ObjectId('6ae6c3291f935b62af636363')
+    '0': ObjectId('6ae6c59f3e2e82db2c9d636c'),
+    '1': ObjectId('6ae6c59f3e2e82db2c9d636d'),
+    '2': ObjectId('6ae6c59f3e2e82db2c9d636e'),
+    '3': ObjectId('6ae6c59f3e2e82db2c9d636f'),
+    '4': ObjectId('6ae6c59f3e2e82db2c9d6370'),
+    '5': ObjectId('6ae6c59f3e2e82db2c9d6371')
   }
 }
 ProductDB> Accessories:

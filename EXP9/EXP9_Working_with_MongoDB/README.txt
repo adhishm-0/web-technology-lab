@@ -16,4 +16,4 @@ Run a program
 
 Q1–Q4 insert their sample records, so run them against fresh lab databases or clear the corresponding collection before rerunning. Q5 inserts its seed records only when the students collection does not exist.
 
-The screenshot panels were captured from actual mongosh output produced by running the included programs against a temporary local MongoDB 8.0 server. Full stdout from each run is saved in mongosh_output/.
+The screenshots are cropped from Konsole captures of actual mongosh output after running the included programs against a temporary local MongoDB 8.0 server. Full stdout and uncropped Konsole window captures are saved in mongosh_output/.

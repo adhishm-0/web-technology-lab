@@ -3,11 +3,11 @@ test> switched to db CollegeDB
 CollegeDB> | | | | | | | | | {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('6ae6c32a48f3d46de5ae01f5'),
-    '1': ObjectId('6ae6c32a48f3d46de5ae01f6'),
-    '2': ObjectId('6ae6c32a48f3d46de5ae01f7'),
-    '3': ObjectId('6ae6c32a48f3d46de5ae01f8'),
-    '4': ObjectId('6ae6c32a48f3d46de5ae01f9')
+    '0': ObjectId('6ae6c5c199493f7eee7dc8bd'),
+    '1': ObjectId('6ae6c5c199493f7eee7dc8be'),
+    '2': ObjectId('6ae6c5c199493f7eee7dc8bf'),
+    '3': ObjectId('6ae6c5c199493f7eee7dc8c0'),
+    '4': ObjectId('6ae6c5c199493f7eee7dc8c1')
   }
 }
 CollegeDB> 

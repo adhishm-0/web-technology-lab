@@ -5,11 +5,11 @@ EmployeeDB>
 EmployeeDB> | | | | | | {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('6ae6c328b34c62eb87b40d4b'),
-    '1': ObjectId('6ae6c328b34c62eb87b40d4c'),
-    '2': ObjectId('6ae6c328b34c62eb87b40d4d'),
-    '3': ObjectId('6ae6c328b34c62eb87b40d4e'),
-    '4': ObjectId('6ae6c328b34c62eb87b40d4f')
+    '0': ObjectId('6ae6c568c18f9f1799a00b66'),
+    '1': ObjectId('6ae6c568c18f9f1799a00b67'),
+    '2': ObjectId('6ae6c568c18f9f1799a00b68'),
+    '3': ObjectId('6ae6c568c18f9f1799a00b69'),
+    '4': ObjectId('6ae6c568c18f9f1799a00b6a')
   }
 }
 EmployeeDB> All employees:
