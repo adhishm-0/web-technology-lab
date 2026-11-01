@@ -1,0 +1,9 @@
+{
+  "name": "starverse-node-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Experiment 10 - Node.js HTTP server for StarVerse",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
