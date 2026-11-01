@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiment 6 — JavaScript Styles and Animations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><h1>JavaScript — Styles and Animations</h1><p>Experiment 6 · Interactive examples</p></header>
+  <main>
+    <section class="card" id="q1">
+      <h2>Question 1: Digital Clock</h2>
+      <p>Current time, refreshed every second with <code>setInterval()</code>.</p>
+      <output id="clock" aria-live="polite">--:--:--</output>
+    </section>
+    <section class="card" id="q2">
+      <h2>Question 2: Dynamic Background</h2>
+      <p>The background changes automatically every 30 seconds. Use the button to preview a new color now.</p>
+      <button id="changeColor">Change Color Now</button>
+      <span id="colorValue" aria-live="polite"></span>
+    </section>
+    <section class="card" id="q3">
+      <h2>Question 3: Mouse Font Size</h2>
+      <p id="zoomText">Move the pointer over this paragraph to enlarge it; move away to restore its size.</p>
+    </section>
+    <section class="card" id="q4">
+      <h2>Question 4: Move and Stop the Car</h2>
+      <p>Move advances the car. Stop pauses it at its current position.</p>
+      <div id="track" aria-label="Car animation track"><span id="car" role="img" aria-label="car">🚗</span></div>
+      <button id="moveCar">Move</button><button id="stopCar" class="secondary">Stop</button>
+    </section>
+    <section class="card" id="q5">
+      <h2>Question 5: Student Records</h2>
+      <p>Students are listed with register numbers and birth-year categories.</p>
+      <ul id="studentList"></ul>
+    </section>
+  </main>
+  <footer>Web Technology Lab · Experiment 6</footer>
+</body>
+</html>
